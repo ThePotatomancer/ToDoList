@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" style="font-family:Calibri">
+<script src="/main.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <title >ToDoList</title>
+</head>
+<body style="background-color:powderblue;" >
+  <h1 > Your To Do List </h1>
+</body>
+<form action="/tasks" method="POST">
+    <input  type="text" placeholder="title" name="title">
+    <input  type="text" placeholder="description" name="description">
+    <button id= 'post-button'type="submit">Submit</button>
+</form>
+<form action="/" method="GET">
+  <h2> Tasks </h2>
+<ul class="Tasks">
+  <% for(var i = 0; i < tasks.length; i++) {%>
+    <li class="task">
+      <b><%= tasks[i].title %></b>:
+      <span><%= tasks[i].description %></span>
+      <b id="counter"><%= i%></b>
+    </li>
+    <input id="delete-button" type="button" value="Delete task" onclick="removeTask()" />
+    <button id="update-button" type = "submit">Replace your task</button>
+  <% } %>
+</ul>
+</form>
+<div id="message"></div>
+</html>
