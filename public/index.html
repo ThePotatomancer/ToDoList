@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" style="font-family:Calibri">
-<script src="/main.js"></script>
 <head>
   <meta charset="UTF-8">
   <title >ToDoList</title>
@@ -22,10 +21,11 @@
       <span><%= tasks[i].description %></span>
       <b id="counter"><%= i%></b>
     </li>
-    <input id="delete-button" type="button" value="Delete task" onclick="removeTask()" />
     <button id="update-button" type = "submit">Replace your task</button>
   <% } %>
 </ul>
 </form>
 <div id="message"></div>
+<button id="delete-button" type = "submit">Delete your task</button>
+<script src="./main.js"></script>
 </html>

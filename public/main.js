@@ -3,13 +3,12 @@
   const deleteButton = document.getElementById('delete-button')
   const message = document.querySelector('#message')
 
-  // document.addEventListener('DOMContentLoaded', function () {
-  // init();
-  deleteButton.addEventListener('submit', e => {
-    console.log('hhhhhhhhhhhhhhhhhhhhhhhhhhh');
+  document.addEventListener('DOMContentLoaded', function () {
+  init();
+  deleteButton.addEventListener('click', e => {
     fetch('/tasks', {
       method: 'DELETE',
-      //headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         title: "orine",
         decription: "bason"   
@@ -23,6 +22,7 @@
         window.location.reload(true)
       })
       },false)
+    })
 
 updateButton.addEventListener('click', function() {
     fetch('/tasks', {
