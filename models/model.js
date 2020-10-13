@@ -1,10 +1,14 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
+//CR: This file is good;
 
-const RequestSchema = new mongoose.Schema ({
-    title: {type:String},
-    description: {type:String}},
-    {timestamps:true}
-)
+const RequestSchema = new mongoose.Schema(
+  {
+    //CR: Can't you just write - title2: String ? I'm not sure
+    title: { type: String },
+    description: { type: String },
+  },
+  { timestamps: true }
+);
 
-const Task = mongoose.Model('Task', RequestSchema);
+const Task = mongoose.Model("Task", RequestSchema);
 export default Task;
