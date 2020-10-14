@@ -1,0 +1,4 @@
+# this file should exist, and it definetly should include node_modules at the very least
+# ideally also .vscode
+# putting node modules in git pollutes the heck out of it
+# you can always just do "npm install" after cloning the repo, a much prefered option
